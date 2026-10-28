@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hiking club: wrapped</title><style>*{box-sizing:border-box;margin:0}body{background:#111;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff}
+.deck{display:flex;flex-wrap:wrap;gap:24px;padding:24px;justify-content:center}
+.card{width:360px;height:640px;border-radius:28px;padding:40px 32px;display:flex;flex-direction:column;justify-content:center;gap:14px;position:relative;overflow:hidden}
+.card h1{font-size:15px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;position:absolute;top:34px;left:32px}
+.card h2{font-size:30px;line-height:1.1}.card p{font-size:19px;line-height:1.35}.card .big{font-size:64px;font-weight:800;line-height:1}.card .small{font-size:14px;opacity:.8}
+.split{display:flex;height:22px;border-radius:11px;overflow:hidden;gap:2px;margin-bottom:12px}.who{display:flex;align-items:center;gap:10px}
+.who i{width:14px;height:14px;border-radius:7px}.who b{margin-left:auto}
+.clock{display:flex;align-items:flex-end;gap:3px;height:120px}.clock i{flex:1;background:rgba(255,255,255,.45);border-radius:3px 3px 0 0}
+.row{display:grid;grid-template-columns:110px 1fr 46px;align-items:center;gap:10px;font-size:18px}.row i{height:16px;border-radius:8px;opacity:.85}.row b{text-align:right}
+.card .emo{font-size:30px;letter-spacing:.06em}
+[data-r]{position:relative;white-space:pre-wrap}.decoding{color:transparent}.layer{position:absolute;inset:0;color:#fff;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace}
+@media (prefers-reduced-motion: reduce){.layer{display:none}.decoding{color:inherit}}</style><main class="deck"><section class="card" style="background:linear-gradient(160deg,#ff5e7e,#7b2ff7)"><h1>Your year together</h1><h2 data-r>Hiking club</h2><p class="big" data-r>2,358</p><p data-r>messages on 233 days</p><p class="small" data-r>Jan 1, 2026 to Dec 30, 2026</p></section><section class="card" style="background:linear-gradient(160deg,#7b61ff,#1f1c5a)"><h1>Who talks most</h1><div class="split"><i style="flex:711;background:#ff5e7e"></i> <i style="flex:581;background:#7b61ff"></i> <i style="flex:482;background:#00b3a4"></i> <i style="flex:344;background:#ffb020"></i> <i style="flex:240;background:#2f80ed"></i></div><p class="who"><i style="background:#ff5e7e"></i><span data-r>Ana</span><b data-r>30%</b></p><p class="who"><i style="background:#7b61ff"></i><span data-r>Ben</span><b data-r>25%</b></p><p class="who"><i style="background:#00b3a4"></i><span data-r>Chloe</span><b data-r>20%</b></p><p class="who"><i style="background:#ffb020"></i><span data-r>Dev</span><b data-r>15%</b></p><p class="who"><i style="background:#2f80ed"></i><span data-r>Eli</span><b data-r>10%</b></p></section><section class="card" style="background:linear-gradient(160deg,#00b3a4,#0b3d5c)"><h1>When you talk</h1><p class="big" data-r>22:00</p><p data-r>is your hour. Fridays are your day.</p><div class="clock"><i style="height:34%"></i><i style="height:13%"></i><i style="height:9%"></i><i style="height:8%"></i><i style="height:8%"></i><i style="height:6%"></i><i style="height:6%"></i><i style="height:6%"></i><i style="height:28%"></i><i style="height:25%"></i><i style="height:10%"></i><i style="height:6%"></i><i style="height:33%"></i><i style="height:45%"></i><i style="height:30%"></i><i style="height:15%"></i><i style="height:6%"></i><i style="height:6%"></i><i style="height:35%"></i><i style="height:69%"></i><i style="height:62%"></i><i style="height:82%"></i><i style="height:100%;background:#fff"></i><i style="height:86%"></i></div><p class="small" data-r>busiest day: Jan 24, 2026, 55 messages</p></section><section class="card" style="background:linear-gradient(160deg,#ffb020,#e2557f)"><h1>Your words</h1><div class="row"><span data-r>night</span><i style="width:90%;background:#ffffff"></i><b data-r>274</b></div><div class="row"><span data-r>again</span><i style="width:62%;background:#ffffff"></i><b data-r>181</b></div><div class="row"><span data-r>good</span><i style="width:60%;background:#ffffff"></i><b data-r>175</b></div><div class="row"><span data-r>thursday</span><i style="width:58%;background:#ffffff"></i><b data-r>167</b></div><div class="row"><span data-r>way</span><i style="width:56%;background:#ffffff"></i><b data-r>162</b></div><p class="emo" data-r>🎉 🍕 😴 🍿 🎶</p></section><section class="card" style="background:linear-gradient(160deg,#2f80ed,#0f1f4a)"><h1>Longest streak</h1><p class="big" data-r>14 days</p><p data-r>in a row, Mar 25, 2026 to Apr 7, 2026</p><p class="small" data-r>329 photos, videos and voice notes</p></section><section class="card" style="background:linear-gradient(160deg,#e2557f,#3a0f3f)"><h1>Who breaks the silence</h1><p class="big" data-r>Ana</p><p data-r>writes first after a quiet night most often</p><p class="small" data-r>made with chat-wrapped</p></section></main><script>
+(() => {  // the decode preset of ascii-reveal: ramp, then scramble, then the real character; one shared loop at ~30 fps
+  const RAMP = ' .:-=+*#%@', SCR = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&*+=?/', TICK = 60, VEL = 3.2, MAX_WAVE = 220;
+  const still = /[?&]still=1/.test(location.search), calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cards = [...document.querySelectorAll('.card')];
+  if (still) return;
+  if (calm) { cards.forEach(c => c.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 220, easing: 'ease-out' })); return; }
+  const hash = (a, b) => { let h = Math.imul(a ^ 0x9e3779b9, 0x85ebca6b) ^ Math.imul(b, 0xc2b2ae35); h ^= h >>> 13; return (h >>> 0) / 4294967296; };
+  const runs = [];
+  cards.forEach(card => {
+    const r = card.getBoundingClientRect(), ox = r.left + r.width / 2, oy = r.top + r.height / 2;
+    card.querySelectorAll('[data-r]').forEach((el, k) => {
+      const text = el.textContent, e = el.getBoundingClientRect();
+      const offset = Math.min(Math.hypot(e.left + e.width / 2 - ox, e.top + e.height / 2 - oy) / VEL, MAX_WAVE);
+      const spread = Math.min(200, 40 + text.length * 4);
+      const layer = document.createElement('span');
+      layer.className = 'layer'; layer.setAttribute('aria-hidden', 'true');
+      el.classList.add('decoding'); el.appendChild(layer);  // the real text stays in the DOM for readers and search
+      runs.push({ el, layer, text, chars: [...text].map((c, i) => ({ c, at: offset + spread * i / Math.max(1, text.length), dur: 90 + 110 * hash(k, i) })) });
+    });
+  });
+  const t0 = performance.now(); let last = 0;
+  const frame = now => {
+    const t = now - t0;
+    if (now - last >= 30) {
+      last = now;
+      let busy = false;
+      for (const run of runs) {
+        if (run.done) continue;
+        let s = '', open = false;
+        run.chars.forEach((ch, i) => {
+          const p = (t - ch.at) / ch.dur;
+          if (ch.c === ' ' || ch.c === '\n' || p >= 1) s += ch.c;
+          else if (p < 0) { s += ' '; open = true; }
+          else if (p < 0.35) { s += RAMP[1 + Math.floor(p / 0.35 * (RAMP.length - 1))]; open = true; }
+          else { s += SCR[Math.floor(hash(i, Math.floor(t / TICK)) * SCR.length)]; open = true; }
+        });
+        run.layer.textContent = s;
+        if (!open) { run.done = true; run.layer.remove(); run.el.classList.remove('decoding'); } else busy = true;
+      }
+      if (!busy) return;
+    }
+    requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+})();
+</script></html>

@@ -1,0 +1,11 @@
+chat-wrapped includes work from:
+
+- whatsapp-mcp (https://github.com/finereli/whatsapp-mcp), MIT License, Copyright (c) 2026 Eli Finer.
+  fold(), words(), parse_query(), matches() and search() in chat_wrapped.py are ported from src/store.ts
+  (commit 67b6c5e); tests/test_chat_wrapped.py reuses the search fixture and checks of test/store.test.mts.
+
+- ascii-reveal (https://github.com/quanhoangindex/ascii-reveal), MIT License, Copyright (c) 2026 Quan Hoang.
+  The decode effect in the page uses the `decode` preset of src/core/presets.ts and the `fast` timing of
+  src/core/engine.ts; the JavaScript is a new, text-only implementation.
+
+The example chats in examples/ are made up (examples/make_chat.py); any resemblance to real people is chance.
